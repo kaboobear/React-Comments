@@ -21,7 +21,7 @@
 
 <hr>
 
-![Layout](gitImg/kaboo.png)
+![Layout](kaboo.png)
 
 <br>
 
