@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {logout} from '../actions/authActions'
 import {connect} from 'react-redux'
-import $ from 'jquery'
 
 class Header extends Component {
     render() {
@@ -14,7 +13,7 @@ class Header extends Component {
                 <div className="container flex-wrap">
                     <NavLink exact className="header-logo" to="/">Template</NavLink>
 
-                    {(isLoading === false) && (
+                    {/* {(isLoading === false) && (
                         <ul className="header-nav desk">
                             <li>
                                 <NavLink exact className="nav-item" to="/">Home</NavLink>
@@ -34,10 +33,10 @@ class Header extends Component {
                                 </li>
                             )}
                         </ul>
-                    )}
+                    )} */}
 
                     <ul className="header-user">
-                        <li>
+                        {/* <li>
                             <NavLink to='/cart' className="header-cart">
                                 <div className="cart-ico">
                                     <div className="cart-ico-img">
@@ -52,7 +51,7 @@ class Header extends Component {
                                     {cart.total}<span className="dollar">$</span>
                                 </div>
                             </NavLink>
-                        </li>
+                        </li> */}
 
                         {(isLoading === false) && (!this.props.isAuth)
                             ? (

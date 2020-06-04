@@ -249,6 +249,11 @@ input[type=number] {
   position: relative;
 }
 
+.disable-btn{
+  background: #aaa !important;
+  cursor: default;
+}
+
 .user-btn {
   display: flex;
   align-items: flex-end;
@@ -382,6 +387,17 @@ textarea::placeholder,
 input::placeholder {
   opacity: .7;
   transition: .2s;
+}
+
+.disabled-text{
+  padding-right: 12px !important;
+  padding-top: 45px !important;
+}
+
+.disabled-text::placeholder{
+  text-align: center !important;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 input:focus::placeholder,
@@ -3562,6 +3578,134 @@ textarea:focus::placeholder {
     display: none !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comments-section{
+  margin-top: 60px;
+}
+
+.comments-form-content{
+  display: flex;
+  position: relative;
+}
+
+.comments-form-content textarea{
+  padding-right: 60px;
+}
+
+.comment-btn{
+  width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  position: absolute;
+  right:8px;
+  bottom:20px;
+}
+
+.comment-btn img{
+  filter: invert(100%);
+}
+
+.comment-items{
+  margin-top: 8px;
+}
+
+.comment-item{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.comment-img{
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 11px;
+}
+
+.comment-content{
+  flex:1;
+}
+
+.comment-top{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.comment-title{
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.comment-time{
+  font-size: 10px;
+  color:#aaa;
+}
+
+.comment-text{
+  color:#555;
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.no-comments{
+  font-size: 20px;
+  color:#777;
+  text-align: center;
+  font-weight: 300;
+  padding-top: 8px;
+}
+
+.log-to-comment{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.log-link{
+  color:#333;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration:underline;
+  transition: .2s;
+}
+
+.log-link:hover{
+  opacity: .8;
+}
+
+.login-text{
+  color:#333;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+
+
+
+
 
 
 /* -----------------------------------------------------

@@ -2,16 +2,15 @@
     <img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="100" height="100">
 </p>
 
-<h1 align="center">MERN stack online-shop</h1>
+<h1 align="center">React comment for items (+ Auth)</h1>
 
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
 ### What is this?
-+ My first big MERN-stack project
-+ Online-shop of stickers
-+ Portfolio project
++ Just my new technologies testing
++ Saving my progres on the GitHub repo
 
 <hr>
 
@@ -22,41 +21,10 @@
 
 <hr>
 
-### Project demo [Here](https://kaboo-shop-test.herokuapp.com)
-
-<hr>
-
-![Layout](gitImg/kaboo11.png)
+![Layout](gitImg/kaboo.png)
 
 <br>
 
-![Layout](gitImg/kaboo12.png)
-
-<br>
-
-![Layout](gitImg/kaboo13.png)
-
-<br>
-
-![Layout](gitImg/kaboo14.png)
-
-<br>
-
-![Layout](gitImg/kaboo15.png)
-
-<br>
-
-![Layout](gitImg/kaboo16.png)
-
-<br>
-
-![Layout](gitImg/kaboo17.png)
-
-<br>
-
-![Layout](gitImg/kaboo19.png)
-
-<br>
 
 
 <h3>Contact Me:</h3>
@@ -84,9 +52,9 @@
 
 
 
-[forks-shield]: https://img.shields.io/github/forks/kaboobear/E-commerce?style=flat-square
-[forks-url]: https://github.com/kaboobear/E-commerce/network/members
-[issues-shield]: https://img.shields.io/github/issues/kaboobear/E-commerce.svg?style=flat-square
-[issues-url]: https://github.com/kaboobear/E-commerce/issues
-[license-shield]: https://img.shields.io/github/license/kaboobear/E-commerce.svg?style=flat-square
-[license-url]: https://github.com/kaboobear/E-commerce/blob/master/LICENSE.txt
+[forks-shield]: https://img.shields.io/github/forks/kaboobear/React-Comments?style=flat-square
+[forks-url]: https://github.com/kaboobear/React-Comments/network/members
+[issues-shield]: https://img.shields.io/github/issues/kaboobear/React-Comments.svg?style=flat-square
+[issues-url]: https://github.com/kaboobear/React-Comments/issues
+[license-shield]: https://img.shields.io/github/license/kaboobear/React-Comments.svg?style=flat-square
+[license-url]: https://github.com/kaboobear/React-Comments/blob/master/LICENSE.txt

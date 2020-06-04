@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getItem, getItems} from '../actions/itemActions'
+import {getComments} from '../actions/commentActions'
 import {addToCart} from '../actions/cartActions'
 import {NavLink} from 'react-router-dom';
-import $ from 'jquery';
 
+import Comments from './comments';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -52,23 +53,7 @@ class OneItem extends Component {
                         this.setState({
                             item: elem
                         }, () => {
-                            //Accordeon start
-                            $('.acc-item')
-                                .on("click", ".acc-button", function () {
-                                    if ($(this).hasClass('active')) {
-                                        $(this)
-                                            .next()
-                                            .stop(true)
-                                            .slideUp(500);
-                                        $(this).removeClass('active');
-                                    } else {
-                                        $(this)
-                                            .next()
-                                            .stop(true)
-                                            .slideDown(500);
-                                        $(this).addClass('active');
-                                    }
-                                });
+                            this.props.getComments(this.state.item._id);
                         })
                 })
         }
@@ -157,96 +142,6 @@ class OneItem extends Component {
                                 </div>
                             </form>
 
-                            <div className="one-item-header">
-                                Information
-                            </div>
-
-                            <div className="acc about-acc">
-                                <div className="acc-item">
-                                    <div className="acc-button">
-                                        About our stickers
-                                    </div>
-
-                                    <div className="acc-content">
-                                        <div className="info-block">
-                                            <h3>Best choice</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, vitae animi.
-                                                Quod, excepturi repellendus numquam doloremque accusamus temporibus cumque
-                                                maiores quo error, ad recusandae vero accusantium nesciunt beatae, perferendis
-                                                eligendi aut! Pariatur repudiandae unde ratione officia suscipit aliquam numquam
-                                                porro tempora!</p>
-
-                                            <h3>Some facts</h3>
-                                            <ul>
-                                                <li>Lorem ipsum dolor sit amet.</li>
-                                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                                </li>
-                                                <li>Lorem, ipsum dolor.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="acc-item">
-                                    <div className="acc-button">
-                                        Best technologies
-                                    </div>
-
-                                    <div className="acc-content">
-                                        <div className="info-block">
-                                            <h3>About materials</h3>
-                                            <ul>
-                                                <li>Lorem ipsum dolor sit amet.</li>
-                                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                                </li>
-                                                <li>Lorem, ipsum dolor.</li>
-                                                <li>Lorem, ipsum dolor. New item.</li>
-                                            </ul>
-
-                                            <h3>Factory process</h3>
-
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde placeat libero
-                                                nostrum sapiente impedit maxime magni ut expedita molestiae modi tenetur, nisi
-                                                blanditiis consequuntur! Adipisci, unde praesentium facere vel odio suscipit hic
-                                                modi, magni accusamus magnam earum, quaerat ipsa architecto debitis inventore
-                                                quos possimus temporibus!</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="acc-item">
-                                    <div className="acc-button">
-                                        More information
-                                    </div>
-
-                                    <div className="acc-content">
-                                        <div className="info-block">
-                                            <h3>Best choice</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, vitae animi.
-                                                Quod, excepturi repellendus numquam doloremque accusamus temporibus cumque
-                                                maiores quo error, ad recusandae vero accusantium nesciunt beatae, perferendis
-                                                eligendi aut! Pariatur repudiandae unde ratione officia suscipit aliquam numquam
-                                                porro tempora!</p>
-
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde placeat libero
-                                                nostrum sapiente impedit maxime magni ut expedita molestiae modi tenetur, nisi
-                                                blanditiis consequuntur! Adipisci, unde praesentium facere vel odio suscipit hic
-                                                modi, magni accusamus magnam earum, quaerat ipsa architecto debitis inventore
-                                                quos possimus temporibus!</p>
-
-                                            <h3>Some facts</h3>
-                                            <ul>
-                                                <li>Lorem ipsum dolor sit amet.</li>
-                                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                                </li>
-                                                <li>Lorem, ipsum dolor.</li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
 
                             <div className="one-item-header">
                                 New Stickers
@@ -304,6 +199,11 @@ class OneItem extends Component {
 }
                             </Slider>
 
+
+
+
+                            <Comments post_id={this.state.item._id}/>
+
                         </div>
                     </div>
                 )}
@@ -325,4 +225,4 @@ const mapStateToProps = (state) => ({
     isUserLoading: state.auth.isLoading
 })
 
-export default connect(mapStateToProps, {getItem, getItems,addToCart})(OneItem);
+export default connect(mapStateToProps, {getItem, getItems,addToCart,getComments})(OneItem);
